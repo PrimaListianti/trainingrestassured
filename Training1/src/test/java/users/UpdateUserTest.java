@@ -33,7 +33,7 @@ public class UpdateUserTest extends BaseTest {
                 .statusCode(201)
                 .body("name", Is.is("morpheus"))
                 .body("job", Is.is("zion resident"))
-                .body(JsonSchemaValidator.matchesJsonSchema(new File("src/resource/users/SuccessCreateUserSchema.json")));
+                .body(JsonSchemaValidator.matchesJsonSchema(new File("src/resource/schema/users/UpdateUser.json")));
         System.out.println(response.asString());
     }
 }

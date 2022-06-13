@@ -32,7 +32,7 @@ public class SecondTest extends BaseTest {
                 .statusCode(201)
                 .body("name", Is.is("Prima"))
                 .body("job", Is.is("QA Engineer"))
-                .body(JsonSchemaValidator.matchesJsonSchema(new File("src/resource/users/SuccessCreateUserSchema.json")));
+                .body(JsonSchemaValidator.matchesJsonSchema(new File("src/resource/schema/users/CreateUser.json")));
         System.out.println(response.asString());
 
     }
